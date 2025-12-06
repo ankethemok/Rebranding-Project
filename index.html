@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<title>Anke's Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalnia:wght@100..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  
+<style>
+  
+  body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: black;
+  color: rgba(250, 249, 247, 1);
+  font-family: "Inter";
+  font-weight: 400;
+}
+   
+  h1 {
+  font-family: "Kalnia", serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 100px;
+  padding: 20px;
+  }
+ 
+  div.me-image {
+    position: relative;
+    opacity: 0.75;
+    margin-top: 130px;
+    height: 0px;
+    max-width: 1200px;
+    max-height: 700px;
+  }
+  
+  div.site-title {
+    font-family: "Kalnia", serif;
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    top: -80px;
+    font-size: 150px;
+    height: 700px;
+    max-width: 1200px;
+    max-height: 700px;
+  }
+  
+  
+  h2 {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  padding: 20px;
+  }
+  
+  p {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+  }
+  
+  footer {
+  font-family: "Inter", serif;
+  font-weight: 400;
+  text-align: left;
+  font-size: 20px;
+  padding: 20px;
+    break-after: always;
+  }
+  
+  nav {
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(250, 249, 247, 1);
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 0.5px solid rgba(250, 249, 247, 0.5);
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  }
+  
+  ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-content: center;
+  }
+  
+  a {
+    color: rgba(250, 249, 247, 1);
+    text-decoration: none;
+  }
+  
+  ul li {
+  float: left;
+  }
+  
+  ul li a {
+  display: block;
+  text-align: center;
+  padding: 14px 26px;
+  text-decoration: none;
+  color: rgba(250, 249, 247, 1);
+  }
+  
+  ul li a:hover {
+  color: rgba(250, 249, 247, 0.7);
+  transition-duration: 0.2s;
+  }
+  
+  img {
+    width: 100%;
+    border-radius: 25px;
+    display: block;
+    vertical-align: middle;
+  }
+  
+  .container {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  gap: 20px; 
+  background-color: black;
+  }
+  
+  .container div {
+  background-color: rgba(250, 240, 20, 0); /* adjust a to see where the border is*/
+  width: auto;
+  height: auto;
+  margin: 15px;
+  text-align: center;
+  border-radius: 30px;
+  position: relative;
+  }
+  
+
+  * {box-sizing: border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+  
+
+/* The horizontal track that moves */
+.slides-track {
+  display: flex;             /* lay slides in a row */
+  transition: transform 0.6s ease;  /* smooth slide */
+}
+
+/* Each slide takes full width of the container */
+.mySlide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.mySlide img {
+  width: 100%;
+  display: block;
+  border-radius: 25px;       /* matches your style */
+}
+  
+</style>
+</head>
+  
+  
+<body>
+
+<nav>
+<ul>
+<li><a href="https://ankethemok.github.io/centered-testing1/">Home</a></li>
+<li><a href="https://ankethemok.github.io/testing2/">About Me</a></li>
+<li><a href="https://ankethemok.github.io/mywork/">My Work</a></li>
+</ul>
+</nav>
+  
+  
+  <h1>Rebrand: Mels' Diner</h1>
+  
+  <h2>Final Rebranding Package</h2>
+<!--  W3Schools and ChatGPT Assisted Slideshow -->
+ <div class="slideshow-container">
+
+  <div class="slides-track">
+    <div class="mySlide">
+      <div class="numbertext">1 / 3</div>
+      <img src="Mel's Diner Rebrand-1.png" alt="Mel's Diner Rebranding Package Title Page">
+    </div>
+
+    <div class="mySlide">
+      <div class="numbertext">2 / 3</div>
+      <img src="Mel's Diner Rebrand-2.png" alt="Mel's Diner Interior">
+    </div>
+
+    <div class="mySlide">
+      <div class="numbertext">3 / 3</div>
+      <img src="Mel's Diner Rebrand-3.png" alt="Mel's Diner Social Media">
+    </div>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 0;
+
+const track = document.querySelector('.slides-track');
+const slides = document.querySelectorAll('.mySlide');
+const dots = document.getElementsByClassName('dot');
+
+showSlide(slideIndex);
+
+function plusSlides(n) {
+  showSlide(slideIndex + n);
+}
+
+function currentSlide(n) {
+  showSlide(n - 1); // dots still use 1,2,3
+}
+
+function showSlide(n) {
+  const total = slides.length;
+
+  if (n >= total) n = 0;
+  if (n < 0) n = total - 1;
+
+  slideIndex = n;
+
+  // Move the track horizontally
+  const offset = -slideIndex * 100;
+  track.style.transform = `translateX(${offset}%)`;
+
+  // Update dots
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  if (dots[slideIndex]) {
+    dots[slideIndex].className += " active";
+  }
+}
+  
+</script>
+                              
+
+  <div>
+  <footer>
+<ul>
+<li><a href="/">Let's connect:</a></li>
+<li><a href="/">ankekmok@gmail.com</a></li>
+<li><a href="/">647-465-9939</a></li>
+</ul>
+</footer>
+  </div>
+  
+  
+  
+</body>
+  
+  
+
+</html>
